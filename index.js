@@ -1385,6 +1385,12 @@ app.get("/api/passenger-trips/:passengerId", async (req, res) => {
   }
 });
 
-server.listen(4500, () => {
-  console.log("Server running on port 4500 🚀");
+// server.listen(4500, () => {
+//   console.log("Server running on port 4500 🚀");
+// });
+
+const PORT = process.env.PORT || 4500;
+
+server.listen(PORT, () => {
+  console.log(`Server running on port ${PORT} 🚀`);
 });
